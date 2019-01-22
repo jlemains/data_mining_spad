@@ -10,9 +10,7 @@ knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/',
 
 
 ```{r echo=FALSE, include=FALSE}
-setwd("C:/Users/timti/Documents/DOC/MBA/datamining/data_mining_spad/")
-
-source('Regression_logistique.r')
+source("stat_de_base_Regression_logistique.R")
 
 data <- read.xlsx("data.xls", sheetIndex = 1, 
                   encoding="UTF-8",stringsAsFactors=FALSE)
