@@ -1,0 +1,38 @@
+---
+title: "coucou_toi"
+output: html_document
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/',
+                      echo=TRUE, warning=FALSE, message=FALSE)
+```
+
+
+```{r echo=FALSE, include=FALSE}
+setwd("C:/Users/timti/Documents/DOC/MBA/datamining/data_mining_spad/")
+
+source('Regression_logistique.r')
+
+data <- read.xlsx("data.xls", sheetIndex = 1, 
+                  encoding="UTF-8",stringsAsFactors=FALSE)
+```
+
+
+```{r}
+ stat_simple(data)
+```
+
+```{r}
+ tri_a_plat_fct(data)
+```
+
+```{r }
+  data <- regroupement(data)
+  stat_simple(data)
+  tri_a_plat_fct(data)
+```
+
+```{r }
+  reg_logistic(data)
+```
